@@ -6,7 +6,7 @@ function updateTime() {
 
   londonDateElement.innerHTML = londonTime.format("MMMM Do, YYYY");
   londonTimeElement.innerHTML = londonTime.format(
-    "h:m:ss [<small>]A[</small>]"
+    "h:mm:ss [<small>]A[</small>]"
   );
 
   let sydneyElement = document.querySelector("#sydney");
@@ -16,7 +16,7 @@ function updateTime() {
 
   sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do, YYYY");
   sydneyTimeElement.innerHTML = sydneyTime.format(
-    "h:m:ss [<small>]A[</small>]"
+    "h:mm:ss [<small>]A[</small>]"
   );
 }
 
