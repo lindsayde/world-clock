@@ -11,6 +11,18 @@ function updateTime() {
     );
   }
 
+  let saoPauloElement = document.querySelector("#sao-paulo");
+  if (saoPauloElement) {
+    let saoPauloDateElement = saoPauloElement.querySelector(".date");
+    let saoPauloTimeElement = saoPauloElement.querySelector(".time");
+    let saoPauloTime = moment().tz("America/Sao_Paulo");
+
+    saoPauloDateElement.innerHTML = saoPauloTime.format("MMMM Do, YYYY");
+    saoPauloTimeElement.innerHTML = saoPauloTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
   let sydneyElement = document.querySelector("#sydney");
   if (sydneyElement) {
     let sydneyDateElement = sydneyElement.querySelector(".date");
@@ -40,7 +52,8 @@ function updateCity(event) {
           </div>
           <div class="time">${cityTime.format(
             "h:mm:ss"
-          )} <small>${cityTime.format("A")}</small></div>
+          )} <small>${cityTime.format("A")}</small>
+          </div>
         </div> <a href="/">All cities</a> `;
 }
 
